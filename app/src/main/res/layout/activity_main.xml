@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.x.lekcja8.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tele_lista"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:id="@+id/textView"/>
+
+    <ListView
+        android:id="@+id/telephones"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnNewAlertDialogList"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:text="Muzyka"
+        android:layout_below="@+id/telephones"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnNewAlertDialog"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:text="Alert Dialog"
+        android:layout_below="@+id/zatrzymajAudio"
+        android:layout_toEndOf="@+id/zatrzymajAudio" />
+
+    <Button
+        android:id="@+id/btnNewCustomAlertDialog"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:text="MójCustom AlertDialog"
+        android:layout_above="@+id/btnNewAlertDialog"
+        android:layout_toEndOf="@+id/zatrzymajAudio" />
+
+    <Button
+        android:id="@+id/playSound"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:onClick="playSound"
+        android:text="@string/play"
+        android:layout_alignBaseline="@+id/btnNewAlertDialogList"
+        android:layout_alignBottom="@+id/btnNewAlertDialogList"
+        android:layout_toEndOf="@+id/btnNewAlertDialogList" />
+
+    <Button
+        android:id="@+id/stopSound"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:onClick="stopSound"
+        android:text="@string/stop"
+        android:layout_below="@+id/telephones"
+        android:layout_toEndOf="@+id/playSound" />
+
+    <Button
+        android:id="@+id/btnNewAlertDialogButton"
+        android:layout_width="56pt"
+        android:layout_height="25pt"
+        android:onClick="stopSound"
+        android:text="Wyjście"
+        android:layout_below="@+id/odtworzNagranie"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/nagrajAudio"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:text="Nagraj Dzwięk"
+        android:layout_below="@+id/playSound"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/zatrzymajAudio"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:text="Zatrzymaj Nagrywanie"
+        android:layout_alignBaseline="@+id/nagrajAudio"
+        android:layout_alignBottom="@+id/nagrajAudio"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/odtworzNagranie"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:text="Odtwórz Dzwięk"
+        android:layout_below="@+id/nagrajAudio"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/zatrzymajNagranie"
+        android:layout_width="57pt"
+        android:layout_height="25pt"
+        android:text="Zatrzymaj Dzwięk"
+        android:layout_below="@+id/zatrzymajAudio"
+        android:layout_toEndOf="@+id/nagrajAudio" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView1">
+        <requestFocus />
+    </EditText>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:text = "TextView" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="SaveText"
+            android:text = "Save" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="ViewText"
+            android:text="View" />
+
+        <Button
+            android:id = "@+id/button3"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Clear"
+            android:text = "Clear" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="59dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout">
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="SaveSD"
+            android:text = "SaveSD" />
+        <Button
+            android:id = "@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="ViewSD"
+            android:text="ViewSD" />
+    </LinearLayout>
+
+</RelativeLayout>
